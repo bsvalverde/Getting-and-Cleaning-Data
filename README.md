@@ -58,5 +58,5 @@ The files that identify the subjects are read and inserted into the dataset. It 
 Finally, the datasets are written into files. the summarise_all function is used to apply the mean function to all variables according to the previously defined groups.
 
 	setwd(oldwd)
-	write.table(data, "tidydataset.txt")
-	write.table(summarise_all(data2, funs(mean)), "tidydataset2.txt")
+	write.table(data, "tidydataset.txt", row.name = FALSE)
+	write.table(summarise_all(data2, funs(mean)), "tidydataset2.txt", row.name = FALSE)
